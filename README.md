@@ -1,11 +1,15 @@
 # Answer-Set-Programming
 This repository contains all materials on Answer set programming
 ## Sudoku 
+The Rules of Sudoku
+The classic Sudoku game involves a grid of 81 squares. The grid is divided into nine blocks, each containing nine squares.
+
+The rules of the game are simple: each of the nine blocks has to contain all the numbers 1-9 within its squares. Each number can only appear once in a row, column or box.
 ```
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Template for a SPARC file
-%% Author: 
-%% Description:
+%% Author: Vinh Nguyen (Texas Tech University)
+%% Description: This example illustrates how to use Answer Set Programming to solve Sudoku problem
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 sorts
