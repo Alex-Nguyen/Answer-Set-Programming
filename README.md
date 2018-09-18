@@ -16,52 +16,51 @@ The rules of the game are simple: each of the nine blocks has to contain all the
 
 sorts
     #index =0..8.
+    #number =1..9.
     #mode_range = 0..8.
 predicates
     square(#index, #index, #number).
     mode(#index, #mode_range).
 rules
     square(X,Y,1) | square(X,Y,2) | square(X,Y,3)| square(X,Y,4)| square(X,Y,5)| square(X,Y,6)| square(X,Y,7)| square(X,Y,8)| square(X,Y,9).
-    square(0,4,7).
-    square(0,5,4).
-    square(0,6,6).
+    square(0,0,6).
+    square(0,4,5).
+    square(0,8,3).
     
-    square(1,0,8).
-    square(1,2,7).
-    square(1,3,5).
+    square(1,1,5).
+    square(1,3,7).
+    square(1,6,6).
     
-    square(2,0,5).
-    square(2,2,4).
-    square(2,4,9).
-    square(2,7,2).
+    square(2,0,8).
+    square(2,3,4).
+    square(2,6,1).
+    square(2,7,7).
     
-    square(3,0,4).
-    square(3,1,1).
-    square(3,5,5).
-    square(3,8,2).
+    square(3,0,5).
+    square(3,3,2).
+    square(3,4,1).
+    square(3,6,9).
     
-    square(4,2,8).
-    square(4,3,1).
-    square(4,4,2).
-    square(4,5,3).
-    square(4,6,4).
+    square(4,3,6).
+    square(4,5,9).
     
-    square(5,0,9).
-    square(5,1,2).
-    square(5,3,8).
-    square(5,7,3).
+    square(5,2,6).
+    square(5,4,8).
+    square(5,5,3).
     square(5,8,1).
     
-    square(6,6,2).
-    square(6,7,6).
-    square(6,8,4).
+    square(6,1,8).
+    square(6,2,5).
+    square(6,5,7).
+    square(6,8,2).
     
-    square(7,1,7).
-    square(7,2,2).
-    square(7,6,3).
-    square(7,7,8).
+    square(7,2,3).
+    square(7,5,6).
+    square(7,7,5).
     
-    square(8,0,3).
+    square(8,0,2).
+    square(8,4,9).
+    square(8,8,7).
     
     mode(X, N):-X/3 = N.
     :-square(X,Y1, N), square(X,Y2,N), Y1!=Y2.
