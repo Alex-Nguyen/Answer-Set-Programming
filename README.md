@@ -17,10 +17,12 @@ The rules of the game are simple: each of the nine blocks has to contain all the
 sorts
     #index =0..8.
     #number =1..9.
-    #mode_range = 0..8.
+    #div = 0..8.
 predicates
+    %square(X,Y,N) denotes that the value of square at row X, column Y is N
     square(#index, #index, #number).
-    mode(#index, #mode_range).
+    %div(X,N) denotes that the number of divides in long division X by 3 is N. Example, {0,1,2} div 3 = 0, {3,4,5} div 3 = 1, {6,7,8} div 3 = 2.
+    div(#index, #div).
 rules
     square(X,Y,1) | square(X,Y,2) | square(X,Y,3)| square(X,Y,4)| square(X,Y,5)| square(X,Y,6)| square(X,Y,7)| square(X,Y,8)| square(X,Y,9).
     square(0,0,6).
@@ -65,5 +67,5 @@ rules
     mode(X, N):-X/3 = N.
     :-square(X,Y1, N), square(X,Y2,N), Y1!=Y2.
     :-square(X1,Y, N), square(X2,Y,N), X1!=X2.
-    :-square(X1,Y1,N), square(X2,Y2,N), mode(X1,N1), mode(X2,N1), mode(Y1,N1), mode(Y2,N1), X1 !=X2, Y1!=Y2.
+    :-square(X1,Y1,N), square(X2,Y2,N), div(X1,N1), div(X2,N1), div(Y1,N1), div(Y2,N1), X1 !=X2, Y1!=Y2.
 ```
