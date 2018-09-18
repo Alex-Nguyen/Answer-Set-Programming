@@ -5,6 +5,8 @@ The Rules of Sudoku
 The classic Sudoku game involves a grid of 81 squares. The grid is divided into nine blocks, each containing nine squares.
 
 The rules of the game are simple: each of the nine blocks has to contain all the numbers 1-9 within its squares. Each number can only appear once in a row, column or box.
+![alt text](https://github.com/Alex-Nguyen/Answer-Set-Programming/blob/master/sudoku.PNG)
+
 ```
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Template for a SPARC file
